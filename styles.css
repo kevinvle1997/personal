@@ -1,0 +1,40 @@
+.window {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.field-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    width: 100%;
+}
+
+.field-row .modeless-text {
+    margin-right: 10px; 
+}
+
+#text_find {
+    width: 100%; 
+}
+
+#search_results {
+    margin-left: 30px;
+    text-align: left; /* Align the text to the left */
+    padding: 10px 0; /* Optional: adds vertical padding around the results */
+}
+#search_column {
+    display: flex;
+    flex-direction: column; /* Arrange items in a vertical column */
+    margin-top: 10px;
+    width: 100%;
+}
+
+.search_result {
+    border: 1.5px solid #000;
+    font-family: Chicago_12;
+    font-size: 14px;
+    padding-left: 5px;
+    width: 100%;
+}

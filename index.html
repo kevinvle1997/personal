@@ -1,51 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ekmas/cs16.css@main/css/cs16.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cs16.css</title>
-    <hr class="cs-hr" />Kevin Le</hr>
+    <title>Kevin Le</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="cs-tabs">
-        <input
-          class="radiotab"
-          name="tabs"
-          tabindex="1"
-          type="radio"
-          id="tabone"
-          checked="checked"
-        />
-        <label class="label" for="tabone">Tab One</label>
-        <div class="panel" tabindex="1">
-          <h2>Tab One Content</h2>
-          <p>Tab content...</p>
+    <div class="window">
+        <div class="title-bar"> 
+            <button aria-label="Close" class="close" onclick="openSeparator()"></button>
+            <h1 class="title">About Me</h1>
+            <button aria-label="Resize" class="resize" onclick="closeSeparator()"></button>
         </div>
-        <input
-          class="radiotab"
-          tabindex="1"
-          name="tabs"
-          type="radio"
-          id="tabtwo"
-        />
-        <label class="label" for="tabtwo">Tab Two</label>
-        <div class="panel" tabindex="1">
-          <h2>Tab Two Content</h2>
-          <p>Tab content...</p>
+        <div class="separator"></div>
+        
+        <div class="window-pane">
+            Kevin!
         </div>
-        <input
-          class="radiotab"
-          tabindex="1"
-          name="tabs"
-          type="radio"
-          id="tabthree"
-        />
-        <label class="label" for="tabthree">Tab Three</label>
-        <div class="panel" tabindex="1">
-          <h2>Tab Three Content</h2>
-          <p>Tab content...</p>
+    </div>
+    
+    <script src="script.js"></script>
+
+    <div class="window">
+        <div class="title-bar"> 
+            <button aria-label="Close" class="close"></button>
+            <h1 class="title">Search</h1>
+            <button aria-label="Resize" disabled class="hidden"></button>
         </div>
-      </div>
+        <div class="separator"></div>
+        
+        <div class="modeless-dialog" style="height: auto;">
+            <section class="field-row">
+                <label for="text_find" class="modeless-text">Find:</label>
+                <input id="text_find" type="text" placeholder="" oninput="searchTags()">
+            </section>
+                <section id="search_column" class="field-column">
+                    <div role="menu" id="search_results">
+
+            </section>
+            </ul>
+            </ul>
+            </div>
+    </div>
 </body>
 </html>
